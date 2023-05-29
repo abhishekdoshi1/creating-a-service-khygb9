@@ -6,8 +6,6 @@ export class LoginService {
   constructor(private httpClient: HttpClient) {}
 
   public getData(pageNumber: number, pageSize: number) {
-    return this.httpClient.get(
-      `https://jsonplaceholder.typicode.com/photos?_start=${pageNumber}&_limit=${pageSize}`
-    );
+    return this.httpClient.get(`https://jsonplaceholder.typicode.com/photos?_start=${pageNumber}&_limit=${pageSize}`);
   }
 }
